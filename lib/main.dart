@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perfect_match/category_meals_screen.dart';
 
 import 'categories_screen.dart';
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Perfect Match !!',
+      title: 'Perfect Match !! (Food version)',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.amber,
@@ -24,12 +25,13 @@ class MyApp extends StatelessWidget {
               headline6: TextStyle(
                 color: Colors.cyanAccent,
                 fontSize: 20,
-                //fontWeight: FontWeight.bold,
+                //fontWeight: FontWeight.w600,
                 fontFamily: 'RobotoCondensed',
               ),
             ),
       ),
       home: CategoriesScreen(),
+      routes: {'/category-meals': (ctx) => CategoryMealsScreen()},
     );
   }
 }
