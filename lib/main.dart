@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.amber,
-        canvasColor: Color.fromRGBO(255, 254, 229, 500),
+        canvasColor: Color.fromRGBO(255, 254, 229, 5),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText2: TextStyle(
@@ -23,15 +23,19 @@ class MyApp extends StatelessWidget {
                 color: Colors.cyanAccent,
               ),
               headline6: TextStyle(
-                color: Colors.cyanAccent,
-                fontSize: 20,
+                color: Colors.black,
+                fontSize: 21,
                 //fontWeight: FontWeight.w600,
                 fontFamily: 'RobotoCondensed',
               ),
             ),
       ),
-      home: CategoriesScreen(),
-      routes: {'/category-meals': (ctx) => CategoryMealsScreen()},
+      // home: CategoriesScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => CategoriesScreen(),
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+      },
     );
   }
 }
