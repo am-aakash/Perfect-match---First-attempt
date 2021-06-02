@@ -10,7 +10,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Perfect Match !!',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
+        accentColor: Colors.amber,
+        canvasColor: Color.fromRGBO(255, 254, 229, 500),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              bodyText2: TextStyle(
+                color: Colors.black,
+              ),
+              bodyText1: TextStyle(
+                color: Colors.cyanAccent,
+              ),
+              headline6: TextStyle(
+                color: Colors.cyanAccent,
+                fontSize: 20,
+                //fontWeight: FontWeight.bold,
+                fontFamily: 'RobotoCondensed',
+              ),
+            ),
       ),
       home: CategoriesScreen(),
     );
