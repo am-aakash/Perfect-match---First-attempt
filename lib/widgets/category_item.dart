@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:perfect_match/category_meals_screen.dart';
+import 'package:perfect_match/screens/category_meals_screen.dart';
 //import 'package:perfect_match/category_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -33,7 +33,7 @@ class CategoryItem extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              color.withOpacity(0.5),
+              color.withOpacity(0.4),
               color,
             ],
             begin: Alignment.topCenter,

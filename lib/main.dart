@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:perfect_match/category_meals_screen.dart';
+import 'package:perfect_match/screens/category_meals_screen.dart';
 
-import 'categories_screen.dart';
+import 'screens/categories_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.amber,
-        canvasColor: Color.fromRGBO(255, 254, 229, 5),
+        canvasColor: Color.fromRGBO(255, 254, 229, 0),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText2: TextStyle(
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
                 color: Colors.cyanAccent,
               ),
               headline6: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 21,
                 //fontWeight: FontWeight.w600,
                 fontFamily: 'RobotoCondensed',

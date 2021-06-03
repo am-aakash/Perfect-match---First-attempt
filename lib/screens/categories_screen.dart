@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:perfect_match/category_item.dart';
-import 'dummy_data.dart';
+import 'package:perfect_match/widgets/category_item.dart';
+import '../dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key key}) : super(key: key);
@@ -12,7 +12,7 @@ class CategoriesScreen extends StatelessWidget {
         title: const Text('Find your Perfect Match !!'),
       ),
       body: GridView(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(22),
         children: DUMMY_CATEGORIES
             .map(
               (catData) => CategoryItem(
@@ -24,7 +24,7 @@ class CategoriesScreen extends StatelessWidget {
             .toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
+          childAspectRatio: 1.7,
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
