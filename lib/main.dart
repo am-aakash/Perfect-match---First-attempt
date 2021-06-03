@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:perfect_match/screens/category_meals_screen.dart';
+import 'package:perfect_match/screens/favourites_screen.dart';
 import 'package:perfect_match/screens/meal_detail_screen.dart';
+import 'package:perfect_match/screens/tabs_screen.dart';
 
 import 'screens/categories_screen.dart';
+import 'screens/filters_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.orange[400],
-        canvasColor: Color.fromRGBO(255, 254, 229, 0),
+        canvasColor: Color.fromRGBO(0, 0, 0, 50),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText2: TextStyle(
@@ -34,9 +37,10 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        '/': (ctx) => CategoriesScreen(),
+        '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       onGenerateRoute: (settings) {
         print(settings.arguments);
