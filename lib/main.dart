@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:perfect_match/screens/category_meals_screen.dart';
+import 'package:perfect_match/screens/meal_detail_screen.dart';
 
 import 'screens/categories_screen.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Perfect Match !! (Food version)',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        accentColor: Colors.amber,
+        accentColor: Colors.orange[400],
         canvasColor: Color.fromRGBO(255, 254, 229, 0),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -35,26 +36,20 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => CategoriesScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+      },
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        // if (settings.name == '/meal-detail') {
+        //   return ...;
+        // } else if (settings.name == '/something-else') {
+        //   return ...;
+        // }
+        // return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
       },
     );
   }
 }
-
-// class MyHomePage extends StatefulWidget {
-//   @override
-//   _MyHomePageState createState() => _MyHomePageState();
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('DeliMeals'),
-//       ),
-//       body: Center(
-//         child: Text('Navigation Time!'),
-//       ),
-//     );
-//   }
-// }
