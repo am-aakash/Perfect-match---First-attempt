@@ -4,9 +4,10 @@ import 'package:perfect_match/screens/filters_screen.dart';
 class MainDrawer extends StatelessWidget {
   Widget buildListTile(String title, IconData icon, Function tapHandler) {
     return ListTile(
+      tileColor: Colors.grey[850],
       leading: Icon(
         icon,
-        color: Colors.deepPurpleAccent[100],
+        color: Colors.blueGrey,
         size: 26,
       ),
       title: Text(
@@ -33,7 +34,7 @@ class MainDrawer extends StatelessWidget {
             width: double.infinity,
             padding: EdgeInsets.fromLTRB(20, 30, 20, 0),
             alignment: Alignment.centerLeft,
-            color: Colors.deepPurple,
+            color: Colors.blueGrey,
             child: Text(
               'Perfect Match!',
               style: TextStyle(
@@ -48,7 +49,7 @@ class MainDrawer extends StatelessWidget {
             width: double.infinity,
             padding: EdgeInsets.fromLTRB(20, 0, 20, 20),
             alignment: Alignment.centerLeft,
-            color: Colors.deepPurple,
+            color: Colors.blueGrey,
             child: Text(
               'Food You Love',
               style: TextStyle(
@@ -58,7 +59,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          //SizedBox(height: 20),
           buildListTile('Recipes', Icons.restaurant, () {
             Navigator.of(context).pushReplacementNamed('/');
           }),

@@ -5,6 +5,11 @@ import './models/meal.dart';
 
 const DUMMY_CATEGORIES = const [
   Category(
+    id: 'c8',
+    title: 'Indian',
+    color: Colors.orange,
+  ),
+  Category(
     id: 'c1',
     title: 'Italian Special',
     color: Colors.purple,
@@ -38,11 +43,6 @@ const DUMMY_CATEGORIES = const [
     id: 'c7',
     title: 'Breakfast',
     color: Colors.lightBlue,
-  ),
-  Category(
-    id: 'c8',
-    title: 'Indian Curry',
-    color: Colors.orange,
   ),
   Category(
     id: 'c9',

@@ -16,7 +16,7 @@ class _TabScreenState extends State<TabsScreen> {
     },
     {
       'page': FavoritesScreen(),
-      'title': 'Your Favorite',
+      'title': 'Your Favorites',
     },
   ];
   int _selectedPageIndex = 0;
@@ -39,7 +39,7 @@ class _TabScreenState extends State<TabsScreen> {
         onTap: _selectPage,
         backgroundColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.amber,
+        selectedItemColor: Colors.black,
         selectedFontSize: 18,
         currentIndex: _selectedPageIndex,
         type: BottomNavigationBarType.shifting,
@@ -47,11 +47,13 @@ class _TabScreenState extends State<TabsScreen> {
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
             icon: Icon(Icons.category),
+            // ignore: deprecated_member_use
             title: Text('Categories'),
           ),
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
             icon: Icon(Icons.star),
+            // ignore: deprecated_member_use
             title: Text('Favorites'),
           ),
         ],
