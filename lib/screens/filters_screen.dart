@@ -19,6 +19,15 @@ class _FiltersScreenState extends State<FiltersScreen> {
   bool _vegan = false;
   bool _lactoseFree = false;
 
+  @override
+  void initState() {
+    _glutenFree = widget.currentFilters['gluten'];
+    _lactoseFree = widget.currentFilters['lactose'];
+    _vegetarian = widget.currentFilters['vegetarian'];
+    _vegan = widget.currentFilters['vegan'];
+    super.initState();
+  }
+
   Widget _buildSwitchListTile(
     String title,
     String description,
@@ -40,8 +49,16 @@ class _FiltersScreenState extends State<FiltersScreen> {
         title: Text('Your Filters'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.done_outline_rounded),
-            onPressed: widget.saveFilters,
+            icon: Icon(Icons.save),
+            onPressed: () {
+              final selectedFilters = {
+                'gluten': _glutenFree,
+                'lactose': _lactoseFree,
+                'vegan': _vegan,
+                'vegetarian': _vegetarian,
+              };
+              widget.saveFilters(selectedFilters);
+            },
           ),
         ],
       ),

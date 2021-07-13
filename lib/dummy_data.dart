@@ -323,6 +323,42 @@ const DUMMY_MEALS = const [
     isLactoseFree: true,
   ),
   Meal(
+    id: 'm8',
+    categories: [
+      'c8',
+    ],
+    title: 'Chicken Tikka',
+    affordability: Affordability.Pricey,
+    complexity: Complexity.Challenging,
+    imageUrl:
+        'https://cdn.pixabay.com/photo/2018/12/04/16/49/tandoori-3856045_960_720.jpg',
+    duration: 30,
+    ingredients: [
+      '1 cup yogurt',
+      '1 tablespoon lemon juice',
+      '2 teaspoons fresh ground cumin',
+      '1 teaspoon ground cinnamon',
+      '3 boneless skinless chicken breasts, cut into bite-size pieces',
+      '1 Teaspoon Cayenne Pepper',
+      '1 jalapeno pepper, finely chopped',
+      '1 cup heavy cream',
+      '1 teaspoon salt, or to taste',
+    ],
+    steps: [
+      'In a large bowl, combine yogurt, lemon juice, 2 teaspoons cumin, cinnamon, cayenne, black pepper, ginger, and salt. Stir in chicken, cover, and refrigerate for 1 hour.',
+      'Preheat a grill for high heat.',
+      'Lightly oil the grill grate. Thread chicken onto skewers, and discard marinade. Grill until juices run clear, about 5 minutes on each side.',
+      'Melt butter in a large heavy skillet over medium heat. Saute garlic and jalapeno for 1 minute.',
+      'Season with 2 teaspoons cumin, paprika, and 1 teaspoon salt. Stir in tomato sauce and cream. ',
+      'Add grilled chicken, and simmer for 10 minutes.',
+      'Transfer to a serving platter, and garnish with fresh cilantro.'
+    ],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+  ),
+  Meal(
     id: 'm9',
     categories: [
       'c9',
